@@ -64,7 +64,6 @@ func CreateNewRequest(method, address string, body io.Reader) *http.Request {
 }
 
 func DisplayResponseDetails(resp *http.Response) {
-	// var prettyJson bytes.Buffer
 	var responseBody interface{}
 
 	json.NewDecoder(resp.Body).Decode(&responseBody)
