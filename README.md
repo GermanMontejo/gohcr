@@ -11,9 +11,9 @@ Note, in your url, you can also include your params but you should add an escape
 
 gohcr POST https://127.0.0.1:2121/users?id=abc123\&age=25 ["Content-type":"application/json"] {"firstname":"german","lastname":"montejo","email":"gemontejo@gmail.com"}
 
-Note this project is still in WIP. Some headers might not work, which are yet to be tested. Project will be updated soon.
+Headers are working fine, as tested in my machine. Should there be any problems, feel free to open an issue for it.
 
 This project already has a runnable file named: ghcr.
 If you want to make changes, then build this project, you can:
-go build main.go
-Once built, the executable file will be named as main, just change it to gohcr to make it consistent. I will still have to find a way to address this. To make this runnable where ever you want, you can add the project directory to your path variable.
+Run the script file named: gohcrbuilder.sh
+That script builds main.go and renames it to gohcr (for consistency).
