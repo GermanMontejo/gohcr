@@ -14,7 +14,7 @@ func ExtractBodyFromOSArgs(osArgs []string) map[string]string {
 	osHeaderMaxIndex := getOsHeaderMaxIndex(osArgs)
 	for _, value := range osArgs[osHeaderMaxIndex+1:] {
 		if value != "" {
-			body += value + " "
+			body += value + ":"
 		}
 	}
 
