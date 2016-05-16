@@ -11,9 +11,10 @@ import (
 func main() {
 	address := os.Args[2]
 	method := os.Args[1]
-	body := CreateRequestBody(method, os.Args)
-	req := CreateNewRequest(method, address, body)
 
+	body := CreateRequestBody(method, os.Args)
+	headers := CreateRequestHeaders(method, os.Args)
+	req := CreateNewRequest(method, address, body, headers)
 	resp, err := http.DefaultClient.Do(req)
 
 	if err != nil {
