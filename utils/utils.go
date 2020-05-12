@@ -81,6 +81,7 @@ func CreateNewRequest(method, address string, body io.Reader, headers map[string
 }
 
 func DisplayResponseDetails(resp *http.Response) {
+	// var prettyJson bytes.Buffer
 	var responseBody interface{}
 
 	json.NewDecoder(resp.Body).Decode(&responseBody)
